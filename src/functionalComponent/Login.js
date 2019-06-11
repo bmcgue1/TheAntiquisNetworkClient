@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { bindActionCreators } from "redux";
 import { Col, Form, FormGroup, Label, Input, Button } from "reactstrap";
 import { connect } from "react-redux";
 import { loginLogoutAction } from "../actions/LoginLogoutAction";
@@ -21,7 +20,9 @@ class Login extends Component {
   };
 
   attemptLogin = () => {
-    this.props.actions.jwtAction(this.state.username, this.state.password);
+    this.props.dispatch(
+      loginLogoutAction(this.state.username, this.state.password)
+    );
   };
 
   render() {
@@ -68,19 +69,10 @@ class Login extends Component {
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators({ ...loginLogoutAction }, dispatch)
-  };
-}
-
 function mapStateToProps(state) {
   return {
     jwt: state
   };
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Login);
+export default connect(mapStateToProps)(Login);
