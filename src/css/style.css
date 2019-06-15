@@ -1,0 +1,79 @@
+/* center Items with fade */
+.col-centered {
+  margin: auto;
+  background-color: rgba(36, 35, 34, 0.5);
+  z-index: 100;
+  color: antiquewhite;
+  text-align: center;
+  justify-content: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.loginImage {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: url("../assets/images/thecity.jpeg");
+
+  height: 900px;
+  z-index: 0;
+}
+.logo {
+  background-image: url("../assets/images/logo.jpg");
+  height: 30px;
+}
+/* Navigation Bar  */
+.col1 {
+  background-color: #353940;
+  height: 60px;
+  background-image: url("../assets/images/transparentLogo.png");
+  background-size: cover;
+}
+.col2 {
+  background-color: #353940;
+}
+/* Dash */
+.centerOpacityBase {
+  background-color: rgba(47, 41, 73, 0.5);
+  z-index: 100;
+  color: antiquewhite;
+  text-align: center;
+  justify-content: center;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.blue {
+  background-color: blue;
+  height: 200px;
+}
+
+.red {
+  background-color: red;
+  height: 200px;
+}
+
+.yellow {
+  background-color: bisque;
+  height: 200px;
+}
+
+.userHome {
+  /* background-color: #fafafa; */
+  background-image: url("../assets/images/girlStandding.jpeg");
+  background-size: cover;
+}
+
+/* Common */
+
+.centerContent {
+  justify-content: center;
+  font-size: 1.2em;
+}
+
+#extrarow {
+  height: 300px;
+}

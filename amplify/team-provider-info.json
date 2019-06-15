@@ -1,0 +1,14 @@
+{
+    "prod": {
+        "awscloudformation": {
+            "AuthRoleName": "antiquisnetwork-prod-20190610222445-authRole",
+            "UnauthRoleArn": "arn:aws:iam::786914530635:role/antiquisnetwork-prod-20190610222445-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::786914530635:role/antiquisnetwork-prod-20190610222445-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "antiquisnetwork-prod-20190610222445-deployment",
+            "UnauthRoleName": "antiquisnetwork-prod-20190610222445-unauthRole",
+            "StackName": "antiquisnetwork-prod-20190610222445",
+            "StackId": "arn:aws:cloudformation:us-east-1:786914530635:stack/antiquisnetwork-prod-20190610222445/138c3b40-8bf0-11e9-ba81-126c686965ae"
+        }
+    }
+}
