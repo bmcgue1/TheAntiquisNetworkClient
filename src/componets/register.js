@@ -10,11 +10,10 @@ import {
   Row
 } from "reactstrap";
 import { connect } from "react-redux";
-import { login } from "../actions/LoginLogoutAction";
+import { loginLogoutAction } from "../actions/LoginLogoutAction";
 import "../css/style.css";
-import Counter from "../componets/Counter";
 
-class Login extends Component {
+class Register extends Component {
   constructor(props) {
     super(props);
     this.state = { username: "", password: "", isSubmitted: false };
@@ -30,8 +29,10 @@ class Login extends Component {
     this.setState({ password: e.target.value });
   };
 
-  attemptLogin = () => {
-    this.props.dispatch(login(this.state.username, this.state.password));
+  register = () => {
+    this.props.dispatch(
+      loginLogoutAction(this.state.username, this.state.password)
+    );
   };
 
   render() {
@@ -67,7 +68,7 @@ class Login extends Component {
                 </FormGroup>
               </Col>
               <Button
-                onClick={this.attemptLogin}
+                onClick={this.register}
                 color="info"
                 size="lg"
                 className="mspace"
@@ -90,4 +91,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(Login);
+export default connect(mapStateToProps)(Register);

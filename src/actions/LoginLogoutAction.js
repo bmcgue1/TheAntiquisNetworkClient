@@ -5,7 +5,7 @@ export const LoginLogoutConstants = {
   LOGOUT: "LOGOUT"
 };
 
-export function loginLogoutAction(user, pass) {
+export function login(user, pass) {
   const request = axios.post(
     "http://antiquisnetwork-env.spkqqnhv3w.us-east-1.elasticbeanstalk.com/login",
     {
@@ -20,6 +20,24 @@ export function loginLogoutAction(user, pass) {
         type: LoginLogoutConstants.LOGIN,
         payload: data,
         username: user
+      });
+    });
+  };
+}
+
+export function logout(user, pass) {
+  const request = axios.post(
+    "http://antiquisnetwork-env.spkqqnhv3w.us-east-1.elasticbeanstalk.com/users/sign-up",
+    {
+      username: user,
+      password: pass
+    }
+  );
+
+  return dispatch => {
+    request.then(({ data }) => {
+      dispatch({
+        type: LoginLogoutConstants.LOGOUT
       });
     });
   };
