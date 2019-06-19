@@ -9,16 +9,15 @@ import {
   Container,
   Row
 } from "reactstrap";
-import { connect } from "react-redux";
-import { loginLogoutAction } from "../actions/LoginLogoutAction";
 import "../css/style.css";
+import axios from "axios";
 
 class Register extends Component {
   constructor(props) {
     super(props);
     this.state = { username: "", password: "", isSubmitted: false };
 
-    this.attemptLogin = this.attemptLogin.bind(this);
+    this.register = this.register.bind(this);
   }
 
   handleChange = e => {
@@ -30,9 +29,24 @@ class Register extends Component {
   };
 
   register = () => {
-    this.props.dispatch(
-      loginLogoutAction(this.state.username, this.state.password)
-    );
+    console.log("hi");
+    axios
+      .post(
+        `http://antiquisnetwork-env.spkqqnhv3w.us-east-1.elasticbeanstalk.com/users/sign-up`,
+        {
+          username: this.state.username,
+          password: this.state.password
+        }
+      )
+      .catch(function(error) {
+        console.log(error.status);
+      });
+
+    function jwtDelay() {
+      window.location.replace("/login");
+    }
+
+    setTimeout(jwtDelay, 500);
   };
 
   render() {
@@ -40,6 +54,10 @@ class Register extends Component {
       <Container fluid className="userHome">
         <Row>
           <Col xs={{ size: "8", offset: 2 }} className="centerOpacityBase ">
+            <Row className="centerContent">
+              {" "}
+              <div className="registerImage" />
+            </Row>
             <Form className="form">
               <Col>
                 <FormGroup>
@@ -73,7 +91,7 @@ class Register extends Component {
                 size="lg"
                 className="mspace"
               >
-                Login
+                Sign Up
               </Button>{" "}
             </Form>
           </Col>
@@ -85,10 +103,4 @@ class Register extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    jwt: state
-  };
-}
-
-export default connect(mapStateToProps)(Register);
+export default Register;

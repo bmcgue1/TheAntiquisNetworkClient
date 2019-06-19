@@ -7,6 +7,8 @@ import { Provider } from "react-redux";
 import configureStore from "./storeConfig";
 import Navigation from "./componets/common/Navigation";
 import Dashboard from "./componets/Dashboard";
+import Regiser from "./componets/register";
+import Home from "./componets/Home";
 //import { loadState, saveState } from "./loclaStorage";
 
 // const persistedstate = loadState();
@@ -21,9 +23,10 @@ function App() {
     <Provider store={store}>
       <Router>
         <Navigation />
-        <Route exact path="/" component={Counter} />
+        <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/dash" component={Dashboard} />
+        <Route exact path="/register" component={Regiser} />
       </Router>
     </Provider>
   );

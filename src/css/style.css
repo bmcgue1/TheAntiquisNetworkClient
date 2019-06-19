@@ -28,7 +28,8 @@
   background-color: #353940;
   height: 60px;
   background-image: url("../assets/images/transparentLogo.png");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .col2 {
   background-color: #353940;
@@ -44,6 +45,8 @@
   margin-bottom: 3em;
   padding-top: 10px;
   padding-bottom: 15px;
+  border-radius: 10%;
+  /* filter: blur(4px); */
 }
 
 .blue {
@@ -76,4 +79,38 @@
 
 #extrarow {
   height: 300px;
+}
+
+.network {
+  margin: 0 auto;
+  height: 50px;
+  width: 50px;
+  background-image: url("../assets/icons/enterprise.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.redirectCard {
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.userProfilePic {
+  height: 70px;
+  width: 70px;
+  background-color: beige;
+  border-radius: 50%;
+}
+
+.sighnUpImage {
+  height: 100px;
+  width: 100px;
+  background-image: url("../assets/images/transparentLogo.png");
+  background-size: contain;
+}
+.registerImage {
+  height: 100px;
+  width: 100px;
+  background-image: url("../assets/icons/step.png");
+  background-size: contain;
 }

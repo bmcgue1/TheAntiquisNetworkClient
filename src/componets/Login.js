@@ -32,6 +32,11 @@ class Login extends Component {
 
   attemptLogin = () => {
     this.props.dispatch(login(this.state.username, this.state.password));
+    function jwtDelay() {
+      window.location.replace("/dash");
+    }
+
+    setTimeout(jwtDelay, 500);
   };
 
   render() {
@@ -39,6 +44,10 @@ class Login extends Component {
       <Container fluid className="userHome">
         <Row>
           <Col xs={{ size: "8", offset: 2 }} className="centerOpacityBase ">
+            <Row className="centerContent">
+              {" "}
+              <div className="sighnUpImage" />
+            </Row>
             <Form className="form">
               <Col>
                 <FormGroup>

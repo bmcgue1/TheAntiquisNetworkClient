@@ -37,7 +37,7 @@ class Navigation extends Component {
               <Navbar color="dark" dark>
                 {" "}
                 <Col className="col1" xs="2" />
-                <NavbarBrand href="/">The Antiquis Network</NavbarBrand>
+                <NavbarBrand href="/">Antiquis Network</NavbarBrand>
                 <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
                 <Collapse isOpen={!this.state.collapsed} navbar>
                   <Nav navbar>
@@ -48,7 +48,7 @@ class Navigation extends Component {
                       <NavLink href="/dash">dash</NavLink>
                     </NavItem>
                     <NavItem>
-                      <NavLink href="/AddTask">Add Task</NavLink>
+                      <NavLink href="/register">register</NavLink>
                     </NavItem>
                     <NavItem>
                       <NavLink href="#">Tasks</NavLink>
