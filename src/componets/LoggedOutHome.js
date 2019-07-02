@@ -1,16 +1,9 @@
 import React, { Component } from "react";
-import {
-  Col,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  Button,
-  Container,
-  Row
-} from "reactstrap";
+import { Container, Row } from "reactstrap";
 import "../css/style.css";
-import axios from "axios";
+
+// import AwesomeSlider from "react-awesome-slider";
+// import AwsSliderStyles from "react-awesome-slider/src/styles";
 
 class LoggedOutHome extends Component {
   constructor(props) {
@@ -22,7 +15,9 @@ class LoggedOutHome extends Component {
     return (
       <Container fluid>
         <Row>
-          <h1>Home Page Component</h1>
+          <h1>
+            Temporaliy empty Home page, image drowps down as concent is added.
+          </h1>
         </Row>
       </Container>
     );

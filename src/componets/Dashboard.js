@@ -1,17 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  Button,
-  Container,
-  Row,
-  Col
-} from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import RedirectionCard from "./RedirectionCard";
 
 class Dashboard extends Component {

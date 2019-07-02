@@ -1,14 +1,5 @@
 import React, { Component } from "react";
-import {
-  Col,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  Button,
-  Container,
-  Row
-} from "reactstrap";
+import { Container } from "reactstrap";
 import LoggedOutHome from "./LoggedOutHome";
 
 class Home extends Component {

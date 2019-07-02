@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardTitle, CardText, Col } from "reactstrap";
+import { Card, CardTitle } from "reactstrap";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 

@@ -42,22 +42,10 @@ class Navigation extends Component {
                 <Collapse isOpen={!this.state.collapsed} navbar>
                   <Nav navbar>
                     <NavItem>
-                      <NavLink href="/login">Login</NavLink>
+                      <NavLink href="/login">Login / Register</NavLink>
                     </NavItem>
                     <NavItem>
                       <NavLink href="/dash">dash</NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink href="/register">register</NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink href="#">Tasks</NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink href="#">Offers</NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink href="#">Bids</NavLink>
                     </NavItem>
                   </Nav>
                 </Collapse>
