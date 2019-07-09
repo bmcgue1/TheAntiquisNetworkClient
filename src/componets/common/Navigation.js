@@ -1,15 +1,13 @@
 import React, { Component } from "react";
 import {
-  Nav,
   Navbar,
-  NavItem,
-  NavLink,
-  NavbarBrand,
-  NavbarToggler,
-  Collapse,
   Container,
   Row,
-  Col
+  Col,
+  InputGroup,
+  InputGroupAddon,
+  Button,
+  Input
 } from "reactstrap";
 
 class Navigation extends Component {
@@ -36,19 +34,18 @@ class Navigation extends Component {
             <div>
               <Navbar color="dark" dark>
                 {" "}
-                <Col className="col1" xs="2" />
-                <NavbarBrand href="/">Antiquis Network</NavbarBrand>
-                <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-                <Collapse isOpen={!this.state.collapsed} navbar>
-                  <Nav navbar>
-                    <NavItem>
-                      <NavLink href="/login">Login / Register</NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink href="/dash">dash</NavLink>
-                    </NavItem>
-                  </Nav>
-                </Collapse>
+                <Col className="col1" xs="1" />
+                <Col className="col3" xs={{ size: "2", offset: 4 }} />
+                <Col className="searchbar">
+                  <InputGroup size="sm">
+                    <Input />
+                    <InputGroupAddon addonType="append">
+                      <Button color="secondary" size="sm">
+                        Search
+                      </Button>
+                    </InputGroupAddon>
+                  </InputGroup>
+                </Col>
               </Navbar>
             </div>
           </Col>

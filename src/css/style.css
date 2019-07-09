@@ -27,12 +27,17 @@
 .col1 {
   background-color: #353940;
   height: 60px;
-  background-image: url("../assets/images/transparentLogo.png");
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 .col2 {
   background-color: #353940;
+}
+.col3 {
+  background-color: #353940;
+  height: 60px;
+  width: 60px;
+  background-image: url("../assets/images/transparentLogo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 /* Dash */
 .centerOpacityBase {
@@ -115,4 +120,15 @@
   width: 100px;
   background-image: url("../assets/icons/step.png");
   background-size: contain;
+}
+.myButton {
+  background: url("../assets/images/togglebtn.PNG") no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  width: 75px;
+  height: 75px;
+  border: none;
+}
+.loggedInFunc {
+  display: none !important;
 }

@@ -186,10 +186,7 @@ class Login extends Component {
             </ModalBody>
           </Modal>
           <Col xs={{ size: "8", offset: 2 }} className="centerOpacityBase ">
-            <Row className="centerContent">
-              {" "}
-              <div className="sighnUpImage" />
-            </Row>
+            <Row className="centerContent"> </Row>
             <Row>
               <Col>
                 <Button color="danger" onClick={this.loginToggle}>
