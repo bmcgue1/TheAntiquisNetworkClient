@@ -23,9 +23,20 @@ class SideNav extends React.Component {
     }
   }
 
+  logout() {
+    localStorage.clear();
+    function jwtDelay() {
+      window.location.replace("/");
+    }
+
+    setTimeout(jwtDelay, 500);
+    console.log("logging out ");
+  }
+
   render() {
     return (
       <Sidebar
+        className="side"
         sidebar={
           <Container fluid>
             <Row>
@@ -41,6 +52,17 @@ class SideNav extends React.Component {
             <Row>
               <Button block outline color="secondary" href="#" size="lg">
                 About
+              </Button>
+            </Row>
+            <Row>
+              <Button
+                block
+                outline
+                color="secondary"
+                onClick={() => this.logout()}
+                size="lg"
+              >
+                Logout
               </Button>
             </Row>
           </Container>

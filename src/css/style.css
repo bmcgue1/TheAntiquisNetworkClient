@@ -52,6 +52,7 @@
   padding-bottom: 15px;
   border-radius: 10%;
   /* filter: blur(4px); */
+  z-index: 2q;
 }
 
 .blue {
@@ -73,6 +74,8 @@
   /* background-color: #fafafa; */
   background-image: url("../assets/images/girlStandding.jpeg");
   background-size: cover;
+  z-index: 1;
+  position: relative;
 }
 
 /* Common */
@@ -131,4 +134,8 @@
 }
 .loggedInFunc {
   display: none !important;
+}
+.side {
+  z-index: 100;
+  position: relative;
 }
