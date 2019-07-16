@@ -72,10 +72,14 @@
 
 .userHome {
   /* background-color: #fafafa; */
-  background-image: url("../assets/images/girlStandding.jpeg");
-  background-size: cover;
-  z-index: 1;
+  background-image: url("../assets/images/groupPic.jpg");
+  background-size: contain;
+  height: 2000px;
+  background-repeat: no-repeat;
   position: relative;
+  width: 100%;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
 /* Common */
@@ -138,4 +142,19 @@
 .side {
   z-index: 100;
   position: relative;
+}
+.container-fluid {
+  overflow: hidden;
+  padding: 0px !important;
+}
+
+input[type="text"] {
+  width: 130px;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type="text"]:focus {
+  width: 100%;
 }

@@ -24,7 +24,7 @@ function App() {
     <Provider store={store}>
       <Router>
         <Navigation />
-        <SideNav />
+        {/* <SideNav /> */}
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/dash" component={Dashboard} />

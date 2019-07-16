@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container } from "reactstrap";
+import { Container, Row } from "reactstrap";
 import LoggedOutHome from "./LoggedOutHome";
 
 class Home extends Component {
@@ -10,7 +10,8 @@ class Home extends Component {
 
   render() {
     return (
-      <Container fluid className="userHome">
+      <Container fluid>
+        <div className="userHome" />
         <LoggedOutHome />
       </Container>
     );

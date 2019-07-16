@@ -7,7 +7,15 @@ import {
   InputGroup,
   InputGroupAddon,
   Button,
-  Input
+  Form,
+  FormGroup,
+  Input,
+  NavbarBrand,
+  NavItem,
+  NavLink,
+  NavbarToggler,
+  Collapse,
+  Nav
 } from "reactstrap";
 
 class Navigation extends Component {
@@ -16,8 +24,12 @@ class Navigation extends Component {
 
     this.toggleNavbar = this.toggleNavbar.bind(this);
     this.state = {
-      collapsed: true
+      collapsed: true,
+      search: "",
+      isOpen: false
     };
+
+    this.handleSearch = this.handleSearch.bind(this);
   }
 
   toggleNavbar() {
@@ -26,30 +38,52 @@ class Navigation extends Component {
     });
   }
 
+  handleSearch = e => {
+    this.setState({ search: e.target.value });
+  };
+
+  logout() {
+    localStorage.clear();
+    function jwtDelay() {
+      window.location.replace("/");
+    }
+
+    setTimeout(jwtDelay, 500);
+    console.log("logging out ");
+  }
   render() {
     return (
       <Container fluid>
-        <Row>
-          <Col className="col2">
-            <div>
-              <Navbar color="dark" dark>
-                {" "}
-                <Col className="col1" xs="1" />
-                <Col className="col3" xs={{ size: "2", offset: 4 }} />
-                <Col className="searchbar">
-                  <InputGroup size="sm">
-                    <Input />
-                    <InputGroupAddon addonType="append">
-                      <Button color="secondary" size="sm">
-                        Search
-                      </Button>
-                    </InputGroupAddon>
-                  </InputGroup>
-                </Col>
-              </Navbar>
-            </div>
-          </Col>
-        </Row>
+        <div>
+          <Navbar color="dark" dark>
+            <Form>
+              <FormGroup>
+                <Input
+                  type="text"
+                  name="search"
+                  id="search"
+                  placeholder="search"
+                  onChange={this.handleSearch}
+                  value={this.state.search}
+                />
+              </FormGroup>
+            </Form>
+            <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+            <Collapse isOpen={!this.state.collapsed} navbar>
+              <Nav navbar>
+                <NavItem>
+                  <NavLink href="/login/">Creds</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="#">About</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink onClick={() => this.logout()}>Logout</NavLink>
+                </NavItem>
+              </Nav>
+            </Collapse>
+          </Navbar>
+        </div>
       </Container>
     );
   }
