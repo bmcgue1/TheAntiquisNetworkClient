@@ -187,7 +187,14 @@ class Login extends Component {
           </Modal>
           <Col xs={{ size: "8", offset: 2 }} className="centerOpacityBase ">
             <Row className="centerContent"> </Row>
+
             <Row>
+              <Col className="marg" />
+              <Col className="largeLogo" />
+              <Col />
+            </Row>
+            <Row>
+              <Col />
               <Col>
                 <Button color="danger" onClick={this.loginToggle}>
                   Login
@@ -198,6 +205,26 @@ class Login extends Component {
                   Register
                 </Button>
               </Col>
+              <Col />
+            </Row>
+            <Row>
+              <Col className="marg" />
+              <Col className="marg">
+                {" "}
+                <Form>
+                  <FormGroup>
+                    <Input
+                      type="text"
+                      name="search"
+                      id="search"
+                      placeholder="search for company"
+                      onChange={this.handleSearch}
+                      value={this.state.search}
+                    />
+                  </FormGroup>
+                </Form>
+              </Col>
+              <Col />
             </Row>
           </Col>
         </Row>

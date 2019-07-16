@@ -56,18 +56,6 @@ class Navigation extends Component {
       <Container fluid>
         <div>
           <Navbar color="dark" dark>
-            <Form>
-              <FormGroup>
-                <Input
-                  type="text"
-                  name="search"
-                  id="search"
-                  placeholder="search"
-                  onChange={this.handleSearch}
-                  value={this.state.search}
-                />
-              </FormGroup>
-            </Form>
             <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
             <Collapse isOpen={!this.state.collapsed} navbar>
               <Nav navbar>
